@@ -1,0 +1,127 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Roboto+Slab:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top, #968d8d9f, #8d8181a9), url("img/bg.jpg") no-repeat top center;
+}
+
+header {
+    position: fixed;
+    padding: 10px;
+    top: 0;
+    width: 100%;
+    background-color: #7b1113e5;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+  
+  .text {
+    font-size: 24px;
+    color: white;
+    font-family: 'Lora', serif;
+  }
+
+  h1 {
+    font-size: 35px;
+    color: #7b1113e5;
+    font-family: 'Lora', serif;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-style: italic;
+  }
+
+  h2 {
+    font-size: 18px;
+    color: #000000;
+    font-family: 'Lora', serif;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-style: italic;
+  }
+
+  .lyrics-container {
+    line-height: 2.5;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding:20px;
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    text-align:center;
+    border: 2px solid #7b1113e5;
+    box-shadow: 2px 2px 4px rgba(116, 5, 5, 0.5);
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  .lyrics-container p {
+    font-size: 20px;
+  }
+
+  .lyrics-container:hover {
+    overflow-y: scroll;
+  }
+
+  audio {
+    position: absolute;
+    top: 83%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+  }
+
+  audio::-webkit-media-controls-panel{
+    background-color: #7b1113a9;
+  }
+
+  audio::-webkit-media-controls-play-button{
+    background-color: #7b111360;
+    border-radius: 50%;
+  }
+
+  audio::-webkit-media-controls-volume-slider{
+    background-color: #7b111360;
+    border-radius: 50px; 
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333333a1;
+    color: #ffffffde;
+    text-align: center;
+    padding: 5px 0;
+  }
+  
+
+
+  
