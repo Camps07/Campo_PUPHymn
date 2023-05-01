@@ -1,11 +1,14 @@
-
+// Get the lyrics container element and the audio player element
 const lyricsContainer = document.getElementById('lyrics-container');
 const audioPlayer = document.getElementsByTagName('audio')[0];
+
+// Initialize variables for keeping track of playing status, current index, and current time
 let isPlaying = false;
 let currentIndex = 0;
 let currentTime = 0;
 let timerId = null;
 
+// Define the lyrics as an array of strings
 const lyrics = [
   'Sintang Paaralan',
   'Tanglaw ka ng bayan',
@@ -26,6 +29,7 @@ const lyrics = [
   'PUP, pinagpala'
 ];
 
+// Define a function to reset the styling of the lyrics lines
 const resetLyrics = () => {
   for (let i = 0; i < lyricsContainer.children.length; i++) {
     lyricsContainer.children[i].style.color = '#000';
@@ -33,6 +37,7 @@ const resetLyrics = () => {
     }
   };
 
+// Define a function to update the styling of the current lyrics line
 const updateLyrics = () => {
   lyricsContainer.scrollTo(0, currentIndex * 52);
   resetLyrics();
@@ -42,9 +47,11 @@ const updateLyrics = () => {
   currentIndex++;
   };
 
+// Define a function to start the timer and update the lyrics based on the current time
 const startTimer = () => {
     if (isPlaying) {
         currentTime = audioPlayer.currentTime;
+        // Determine which line of lyrics corresponds to the current time in the audio track
         if (currentTime >= 0 && currentTime < 15) {
         currentIndex = 0; // Sintang Paaralan
         } else if (currentTime >= 15 && currentTime < 18) {
